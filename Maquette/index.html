@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Example</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2.0/dist/css/adminlte.min.css"> -->
+
+</head>
+
+<body>
+
+    <div class="chat-container">
+        <div class="chat-button" id="openChatBtn">
+            <button class="chat-icon-btn">
+                <img src="images/discuss.png" alt="Chat">
+            </button>
+        </div>
+
+        <div id="chat-modal" class="discuss-chat-modal">
+
+            <div class="discuss-modal-content">
+
+
+                <div class="discuss-chat-header">
+                    <h2 class="discuss-chat-header-title">AWS Assistant
+                        Bot</h2>
+                    <button id="closeChatBtn" class="close-btn">&times;</button>
+                </div>
+
+                <div class="discuss-chat-header-status-line" id="chat-header-status-line"></div>
+
+                <div class="body-module" id="chat-panel">
+                    <div class="body-module-chatPanelContainer">
+                        <div class="body-module-chatContainer">
+                            <div class="body-module-chatItemContainer">
+                                <div class="body-module-welcome-title">
+                                    <img class="body-module-welcomeIcon" src="./images/discuss.png" alt="Discuss">
+                                    <div class="body-module-welcome-titleBrand">
+                                        <span class="body-module-welcomeBlueTitle">Discuss</span>
+                                    </div>
+                                </div>
+                                <div class="body-module__welcome-Intro">
+                                    Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing elit. Maiores sit beatae provident explicabo earum error.
+                                </div>
+                                <div class="body-module-comments-users" style="margin-top: 25px;">
+                                    <div class="direct-chat-msg">
+                                        <div class="direct-chat-infos clearfix">
+                                            <span class="direct-chat-name float-left">Alexander Pierce</span>
+                                            <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
+                                        </div>
+                                        <img class="direct-chat-img" src="images/solicoders.png"
+                                            alt="message user image">
+                                        <div class="direct-chat-text">
+                                            Is this template really for free? That's unbelievable!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="body-module-divider"></div>
+
+                <div class="body-module-textBoxContainer">
+                    <div class="body-module-textInputContainer">
+                        <div class="input-wrapper">
+                            <input type="text" name="comment" id="comment" placeholder="Type your message..."
+                                class="input-comment">
+                            <button id="chat-send-message-button" class="body-module-textBoxSendButton"
+                                aria-label="Send message" disabled="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="1.5"
+                                        d="M22 12L3 20l3.563-8L3 4zM6.5 12H22" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

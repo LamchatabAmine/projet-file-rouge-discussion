@@ -8,7 +8,7 @@
     <title>Chat Example</title>
     <link rel="stylesheet" href="style.css">
 
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2.0/dist/css/adminlte.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2.0/dist/css/adminlte.min.css">
 
 </head>
 
@@ -27,8 +27,7 @@
 
 
                 <div class="discuss-chat-header">
-                    <h2 class="discuss-chat-header-title">AWS Assistant
-                        Bot</h2>
+                    <h2 class="discuss-chat-header-title">Solicode Chat</h2>
                     <button id="closeChatBtn" class="close-btn">&times;</button>
                 </div>
 
@@ -60,13 +59,46 @@
                                             Is this template really for free? That's unbelievable!
                                         </div>
                                     </div>
+                                    <div class="direct-chat-msg">
+                                        <div class="direct-chat-infos clearfix">
+                                            <span class="direct-chat-name float-left">Alexander Pierce</span>
+                                            <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
+                                        </div>
+                                        <img class="direct-chat-img" src="images/solicoders.png"
+                                            alt="message user image">
+                                        <div class="direct-chat-text">
+                                            Is this template really for free? That's unbelievable!
+                                        </div>
+                                    </div>
+                                    <div class="direct-chat-msg">
+                                        <div class="direct-chat-infos clearfix">
+                                            <span class="direct-chat-name float-left">Alexander Pierce</span>
+                                            <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
+                                        </div>
+                                        <img class="direct-chat-img" src="images/solicoders.png"
+                                            alt="message user image">
+                                        <div class="direct-chat-text">
+                                            Is this template really for free? That's unbelievable!
+                                        </div>
+                                    </div>
+                                    <div class="direct-chat-msg right">
+                                        <div class="direct-chat-infos clearfix">
+                                            <span class="direct-chat-name float-right">Sarah Bullock</span>
+                                            <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
+                                        </div>
+                                        <img class="direct-chat-img" src="./images/solicoders.png"
+                                            alt="message user image">
+                                        <div class="direct-chat-text">
+                                            You better believe it!
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="body-module-divider"></div>
+                <!-- <div class="body-module-divider"></div>
 
                 <div class="body-module-textBoxContainer">
                     <div class="body-module-textInputContainer">
@@ -82,6 +114,27 @@
                                 </svg>
                             </button>
                         </div>
+                    </div>
+                </div> -->
+
+
+                <div class="chat__conversation-panel">
+                    <div class="chat__conversation-panel__container">
+                        <button class="chat__conversation-panel__button panel-item btn-icon add-file-button">
+                            <svg class="feather feather-plus sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </button>
+                        <input name="comment" type="text" id="chat__comment"
+                            class="chat__conversation-panel__input panel-item" placeholder="Type a message...">
+                        <button class="chat__conversation-panel__button panel-item btn-icon send-message-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M2.01 21L23 12L2.01 3L2 10l15 2l-15 2z" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
 

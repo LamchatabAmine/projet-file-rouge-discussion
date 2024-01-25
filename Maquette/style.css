@@ -35,7 +35,7 @@ body {
     right: 20px;
     z-index: 10001;
     width: 390px;
-    height: 603px;
+    /* height: 603px; */
 }
 
 .discuss-modal-content {
@@ -95,15 +95,13 @@ body {
 body chat
 */
 
-/* .body-module-chatPanelContainer {
-    border: none;
-    display: block;
-    overflow: auto;
-    position: relative;
-    scroll-behavior: smooth;
-    height: calc(100% - 50px - 4px - 1px - 54px - 68px);
-    background-color: var(--color-background-container-content-sgemmm, #ffffff);
-} */
+
+
+.body-module {
+    height: 603px;
+}
+
+
 .body-module-chatPanelContainer {
     border: none;
     display: block;
@@ -111,7 +109,7 @@ body chat
     /* Add overflow property here */
     position: relative;
     scroll-behavior: smooth;
-    height: calc(100% - 50px - 4px - 1px - 54px - 68px);
+    /* height: calc(100% - 50px - 4px - 1px - 54px - 68px); */
     max-height: 486px;
     /* Set a max-height or a fixed height as needed */
     background-color: var(--color-background-container-content-sgemmm, #ffffff);
@@ -194,4 +192,113 @@ body chat
     cursor: pointer;
     background: none;
     border: none;
+}
+
+
+
+/**/
+
+
+
+.btn-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.btn-icon svg {
+    /* stroke: blue; */
+    /* fill: #FFF; */
+    /* width: 50%; */
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #59646a;
+}
+
+
+.chat__conversation-panel {
+    background: #ddd;
+    border-radius: 12px;
+    padding: 0 1em;
+    height: 55px;
+    margin: 5px;
+}
+
+.chat__conversation-panel__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+
+.chat__conversation-panel__container .panel-item:not(:last-child) {
+    margin: 0 1em 0 0;
+}
+
+.chat__conversation-panel__button {
+    background: grey;
+    height: 20px;
+    width: 30px;
+    border: 0;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.chat__conversation-panel .add-file-button {
+    height: 23px;
+    min-width: 23px;
+    width: 23px;
+    background: transparent;
+    border-radius: 50%;
+}
+
+.chat__conversation-panel .add-file-button svg {
+    width: 70%;
+    stroke: #54575c;
+}
+
+.chat__conversation-panel .emoji-button {
+    min-width: 23px;
+    width: 23px;
+    height: 23px;
+    background: transparent;
+    border-radius: 50%;
+}
+
+.chat__conversation-panel .emoji-button svg {
+    width: 100%;
+    fill: transparent;
+    stroke: #54575c;
+}
+
+.chat__conversation-panel .send-message-button {
+    background: var(--chat-send-button-background);
+    height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.chat__conversation-panel .send-message-button:active {
+    transform: scale(0.97);
+}
+
+.chat__conversation-panel .send-message-button svg {
+    margin: 1px -1px;
+}
+
+.chat__conversation-panel__input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    position: relative;
+    color: var(--chat-text-color);
+    font-size: 13px;
+    background: transparent;
+    border: 0;
+    font-family: "Lato", sans-serif;
+    resize: none;
 }

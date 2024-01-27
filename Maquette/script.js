@@ -173,24 +173,24 @@ function createCommentUsers() {
     },
     {
       username: "Hamid Achoua",
-      comment: "Is this template really for free? That's unbelievable!",
+      comment: "Yes, it's completely free to use!",
       avatar:
-        "https://cdn.jsdelivr.net/gh/LamchatabAmine/gh-cdn/images/avatar.png",
-      create_at: "23 Jan 2:00 pm",
+        "https://static.vecteezy.com/system/resources/previews/009/305/107/non_2x/man-avatar-clipart-illustration-free-png.png",
+      create_at: "23 Jan 5:00 pm",
     },
     {
       username: "Soufian Boukhar",
-      comment: "Is this template really for free? That's unbelievable!",
+      comment: "That's awesome! Thanks for sharing.",
       avatar:
-        "https://cdn.jsdelivr.net/gh/LamchatabAmine/gh-cdn/images/avatar.png",
-      create_at: "23 Jan 2:00 pm",
+        "https://png.pngtree.com/png-vector/20230903/ourmid/pngtree-man-avatar-isolated-png-image_9935818.png",
+      create_at: "23 Jan 2:25 pm",
     },
     {
       username: "Jalil betroji",
-      comment: "Is this template really for free? That's unbelievable!",
+      comment: "I can't believe it! Great find, Amine.",
       avatar:
-        "https://cdn.jsdelivr.net/gh/LamchatabAmine/gh-cdn/images/avatar.png",
-      create_at: "23 Jan 2:00 pm",
+        "https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg",
+      create_at: "24 Jan 1:00 pm",
     },
   ];
 
@@ -198,14 +198,64 @@ function createCommentUsers() {
     const ChatMsg = document.createElement("div");
     ChatMsg.classList.add("direct-chat-msg");
 
-    ChatMsg.innerHTML = `
-    <div class="direct-chat-infos clearfix">
-      <span class="direct-chat-name float-left">${message.username}</span>
-      <span class="direct-chat-timestamp float-right">${message.create_at}</span>
-    </div>
-    <img class="direct-chat-img" src="${message.avatar}" alt="message user image">
-    <div class="direct-chat-text">${message.comment}</div>
-  `;
+    const ChatInfos = document.createElement("div");
+    ChatInfos.classList.add("direct-chat-infos", "clearfix");
+
+    const usernameSpan = document.createElement("span");
+    usernameSpan.classList.add("direct-chat-name", "float-left");
+    usernameSpan.textContent = message.username;
+
+    const timestampSpan = document.createElement("span");
+    timestampSpan.classList.add("direct-chat-timestamp", "float-right");
+    timestampSpan.textContent = message.create_at;
+
+    ChatInfos.appendChild(usernameSpan);
+    ChatInfos.appendChild(timestampSpan);
+
+    const ChatImg = document.createElement("img");
+    ChatImg.classList.add("direct-chat-img");
+    ChatImg.src = message.avatar;
+    ChatImg.alt = "message user image";
+
+    const messageText = document.createElement("div");
+    messageText.classList.add("direct-chat-text");
+    messageText.style.position = "relative";
+
+    const messageActionsToggle = document.createElement("span");
+    messageActionsToggle.classList.add("message-actions-toggle", "hide");
+    messageActionsToggle.innerHTML = svgToggleDown;
+
+    const messageActions = document.createElement("div");
+    messageActions.classList.add("message-actions");
+    messageActions.style.display = "none";
+
+    const deleteButton = document.createElement("button");
+    deleteButton.classList.add("delete-button");
+    deleteButton.textContent = "Delete";
+
+    const editButton = document.createElement("button");
+    editButton.classList.add("edit-button");
+    editButton.textContent = "Edit";
+
+    messageActions.appendChild(deleteButton);
+    messageActions.appendChild(editButton);
+
+    messageText.textContent = message.comment;
+    messageText.appendChild(messageActionsToggle);
+    messageText.appendChild(messageActions);
+
+    ChatMsg.appendChild(ChatInfos);
+    ChatMsg.appendChild(ChatImg);
+    ChatMsg.appendChild(messageText);
+
+    ChatMsg.querySelector(".message-actions-toggle").addEventListener(
+      "click",
+      () => {
+        const actions = ChatMsg.querySelector(".message-actions");
+        actions.style.display =
+          actions.style.display === "none" ? "block" : "none";
+      }
+    );
 
     CommentUsers.appendChild(ChatMsg);
   });
@@ -276,3 +326,9 @@ function createConversationPanel() {
 
   return conversationPanel;
 }
+
+// helpers
+
+const svgToggleDown = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<g fill="none" fill-rule="evenodd">
+<path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M13.06 16.06a1.5 1.5 0 0 1-2.12 0l-5.658-5.656a1.5 1.5 0 1 1 2.122-2.121L12 12.879l4.596-4.596a1.5 1.5 0 0 1 2.122 2.12l-5.657 5.658Z"/></g></svg>`;

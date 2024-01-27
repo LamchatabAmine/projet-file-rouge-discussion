@@ -302,3 +302,56 @@ body chat
     font-family: "Lato", sans-serif;
     resize: none;
 }
+
+
+/**/
+
+/* Style for the delete and edit buttons */
+.message-actions {
+    display: flex;
+    align-items: center;
+}
+
+.delete-button,
+.edit-button {
+    margin-left: 5px;
+    padding: 2px 8px;
+    background-color: #f44336;
+    /* Red color for delete button */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.edit-button {
+    background-color: #2196f3;
+    /* Blue color for edit button */
+}
+
+
+
+.message-actions-toggle {
+    position: absolute;
+    cursor: pointer;
+    top: 1px;
+    right: 2px;
+    /* background-color: #8b8f95; */
+    color: #787b80;
+    ;
+    border: none;
+    border-radius: inherit;
+}
+
+
+/**/
+.hide {
+    display: none !important;
+    transition: display 0.3s ease;
+    /* Add transition property */
+}
+
+.direct-chat-text:hover .hide {
+    display: block !important;
+}

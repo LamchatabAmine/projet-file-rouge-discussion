@@ -44,7 +44,7 @@ body {
     max-width: 796px;
     max-height: 603px;
     min-width: 390px;
-    min-height: 603px;
+    /* min-height: 603px; */
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -97,9 +97,9 @@ body chat
 
 
 
-.body-module {
+/* .body-module {
     height: 603px;
-}
+} */
 
 
 .body-module-chatPanelContainer {

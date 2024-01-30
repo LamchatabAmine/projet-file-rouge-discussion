@@ -273,21 +273,21 @@ function createConversationPanel() {
 
   conversationPanel.appendChild(conversationPanelContainer);
 
-  const ButtonAddFile = document.createElement("button");
-  ButtonAddFile.classList.add(
-    "chat__conversation-panel__button",
-    "panel-item",
-    "btn-icon",
-    "add-file-button"
-  );
+  // const ButtonAddFile = document.createElement("button");
+  // ButtonAddFile.classList.add(
+  //   "chat__conversation-panel__button",
+  //   "panel-item",
+  //   "btn-icon",
+  //   "add-file-button"
+  // );
 
-  ButtonAddFile.innerHTML = `
-  <svg class="feather feather-plus sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    <line x1="12" y1="5" x2="12" y2="19"></line>
-    <line x1="5" y1="12" x2="19" y2="12"></line>
-  </svg>`;
+  // ButtonAddFile.innerHTML = `
+  // <svg class="feather feather-plus sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg"
+  //   width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  //   stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  //   <line x1="12" y1="5" x2="12" y2="19"></line>
+  //   <line x1="5" y1="12" x2="19" y2="12"></line>
+  // </svg>`;
 
   // Create input file element
   const inputFile = document.createElement("input");
@@ -295,9 +295,9 @@ function createConversationPanel() {
   inputFile.style.display = "none"; // Hide the input file initially
 
   // Trigger input file selection when ButtonAddFile is clicked
-  ButtonAddFile.addEventListener("click", function () {
-    inputFile.click(); // Simulate a click event on the input file
-  });
+  // ButtonAddFile.addEventListener("click", function () {
+  //   inputFile.click(); // Simulate a click event on the input file
+  // });
 
   // Create form inputs
   const inputComment = document.createElement("input");
@@ -320,7 +320,7 @@ function createConversationPanel() {
     <path fill="currentColor" d="M2.01 21L23 12L2.01 3L2 10l15 2l-15 2z" />
   </svg>`;
 
-  conversationPanelContainer.appendChild(ButtonAddFile);
+  // conversationPanelContainer.appendChild(ButtonAddFile);
   conversationPanelContainer.appendChild(inputComment);
   conversationPanelContainer.appendChild(ButtonSendComment);
 
